@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container {
+    background-color: #f4f4f4;
+    /* height: 400px; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    /* width: 100px; */
+    /* flex-basis: 300px; */
+
+    /* shorthand for grow shrink and bases */
+    flex: 1 0 100px;
+
+    height: 100px;
+    background-color: #254de4;
+    color: white;
+    margin: 10px;
+
+    /* If want to keep all boxes of same size */
+    /* flex-grow: 1; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:nth-of-type(1) {
+    order: 2;
+    /* flex-basis: 200px; */
+    /* flex-grow: 1; */
+    flex-shrink: 3;
+}
+
+.item:nth-of-type(2) {
+    order: 1;
+    /* flex-grow: 2; */
+    flex-shrink: 1;
+}
+
+.item:nth-of-type(3) {
+    /* align-self: flex-end; */
+    order: 3;
+    /* flex-grow: 1; */
+    flex-shrink: 2;
+}
